@@ -10,6 +10,7 @@ class MobileScreenLayout extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        backgroundColor: backgroundColor,
         appBar: AppBar(
           backgroundColor: appBarColor,
           elevation: 0,
@@ -52,6 +53,11 @@ class MobileScreenLayout extends StatelessWidget {
           ),
         ),
         body: const ContactsList(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: tabColor,
+          child: const Icon(Icons.chat, color: Colors.white),
+        ),
       ),
     );
   }
